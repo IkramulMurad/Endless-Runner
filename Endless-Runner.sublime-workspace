@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"Get",
+				"GetComponent<T>()\tT"
+			],
+			[
+				"Fin",
+				"FindWithTag(string tag)\tGameObject"
+			],
+			[
 				"vec",
 				"Vector3\tVector3"
 			],
@@ -20,6 +28,15 @@
 			"settings":
 			{
 				"buffer_size": 801,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/CameraMotor.cs",
+			"settings":
+			{
+				"buffer_size": 506,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Unix"
 			}
@@ -72,7 +89,7 @@
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -86,6 +103,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"lookAt"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -119,8 +137,8 @@
 						"selection":
 						[
 							[
-								540,
-								540
+								543,
+								543
 							]
 						],
 						"settings":
@@ -137,10 +155,43 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 216.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Assets/Scripts/CameraMotor.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 506,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								500,
+								500
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"0,5": "Using directive is not used by code and can be removed safely.",
+								"26,31": "Using directive is not used by code and can be removed safely."
+							},
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -148,7 +199,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 34.0
 	},
 	"input":
 	{
@@ -193,7 +244,7 @@
 	"project": "Endless-Runner.sublime-project",
 	"replace":
 	{
-		"height": 0.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
