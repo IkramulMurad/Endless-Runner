@@ -11,6 +11,8 @@ public class Score : MonoBehaviour {
 	private int maxDifficultyLevel = 5;
 	private int scoreToNextLevel = 10;
 
+	private bool isPlayerDead = false;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -18,6 +20,10 @@ public class Score : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(isPlayerDead){
+			return;
+		}
+
 		if(score > scoreToNextLevel){
 			level_up();
 		}
@@ -35,5 +41,9 @@ public class Score : MonoBehaviour {
 		difficultyLevel++;
 
 		GetComponent<PlayerMotor>().set_speed(difficultyLevel);
+	}
+
+	public void OnDeath(){
+		isPlayerDead = true;
 	}
 }
