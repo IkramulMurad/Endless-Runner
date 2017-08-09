@@ -47,5 +47,15 @@ public class Score : MonoBehaviour {
 	public void OnDeath(){
 		isPlayerDead = true;
 		deathMenu.ToggleEndMenu(score);
+
+		if(PlayerPrefs.HasKey("Highscore")){
+			if(score > PlayerPrefs.GetFloat("Highscore")){
+				PlayerPrefs.SetFloat("Highscore", score);	
+			}
+		}
+		else{
+			PlayerPrefs.SetFloat("Highscore", score);
+		}
+
 	}
 }
