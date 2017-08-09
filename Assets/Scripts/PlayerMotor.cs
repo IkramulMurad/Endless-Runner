@@ -10,6 +10,7 @@ public class PlayerMotor : MonoBehaviour {
 	private float speed = 5.0f;
 	private float verticalVelocity = 0.0f;
 	private float gravity = 10.0f;
+	private bool isDead = false;
 
 	private float animationDuration = 3.0f;
 
@@ -20,6 +21,10 @@ public class PlayerMotor : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		if(isDead){
+			return;
+		}
 
 		if(Time.time < animationDuration){
 			controller.Move(Vector3.forward * speed * Time.deltaTime);
@@ -48,4 +53,17 @@ public class PlayerMotor : MonoBehaviour {
 	public void set_speed(int modifier){
 		speed = 5.0f + modifier;
 	}
+
+	private void OnControllerColliderHit(ControllerColliderHit hit){
+		if(hit.collider.tag == "Enemy"){
+			dead();
+			//Debug.Log(hit.collider.tag);
+		}
+	}
+
+	private void dead(){
+		isDead = true;
+		GetComponent<Score>().OnDeath();
+	}
+
 }
