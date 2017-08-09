@@ -11,6 +11,8 @@ public class PlayerMotor : MonoBehaviour {
 	private float verticalVelocity = 0.0f;
 	private float gravity = 10.0f;
 
+	private float animationDuration = 3.0f;
+
 	// Use this for initialization
 	void Start () {
 		controller = GetComponent<CharacterController> ();
@@ -18,6 +20,12 @@ public class PlayerMotor : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		if(Time.time < animationDuration){
+			controller.Move(Vector3.forward * speed * Time.deltaTime);
+			return;
+		}
+
 		moveVector = Vector3.zero;
 
 		if(controller.isGrounded){

@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"ani",
+				"animationStartingPos\tVector3"
+			],
+			[
+				"tra",
+				"transform\tTransform { get; }"
+			],
+			[
 				"Get",
 				"GetComponent<T>()\tT"
 			],
@@ -24,10 +32,13 @@
 	"buffers":
 	[
 		{
+			"contents": "using System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\n\npublic class PlayerMotor : MonoBehaviour {\n\n\tprivate CharacterController controller;\n\tprivate Vector3 moveVector;\n\t\n\tprivate float speed = 5.0f;\n\tprivate float verticalVelocity = 0.0f;\n\tprivate float gravity = 10.0f;\n\tprivate float animationDuration = 3.0f;\n\n\t// Use this for initialization\n\tvoid Start () {\n\t\tcontroller = GetComponent<CharacterController> ();\n\t}\n\t\n\t// Update is called once per frame\n\tvoid Update () {\n\n\t\tif(Time.time < animationDuration){\n\t\t\tcontroller.Move(Vector3.forward * speed * Time.deltaTime);\n\t\t\treturn;\n\t\t}\n\n\t\tmoveVector = Vector3.zero;\n\n\t\tif(controller.isGrounded){\n\t\t\tverticalVelocity = 0.0f;\n\t\t}\n\t\telse{\n\t\t\tverticalVelocity -= gravity * Time.deltaTime;\n\t\t}\n\n\t\t//x\n\t\tmoveVector.x = Input.GetAxisRaw(\"Horizontal\") * speed;\n\t\t//y\n\t\tmoveVector.y = verticalVelocity;\n\t\t//z\n\t\tmoveVector.z = speed;\n\n\t\tcontroller.Move (moveVector * Time.deltaTime);\n\t}\n}\n",
 			"file": "Assets/Scripts/PlayerMotor.cs",
+			"file_size": 962,
+			"file_write_time": 131467408293642604,
 			"settings":
 			{
-				"buffer_size": 801,
+				"buffer_size": 958,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Unix"
 			}
@@ -36,9 +47,9 @@
 			"file": "Assets/Scripts/CameraMotor.cs",
 			"settings":
 			{
-				"buffer_size": 506,
+				"buffer_size": 982,
 				"encoding": "UTF-8 with BOM",
-				"line_ending": "Unix"
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -121,7 +132,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -130,15 +141,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 801,
+						"buffer_size": 958,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								543,
-								543
+								296,
+								296
 							]
 						],
 						"settings":
@@ -149,16 +160,17 @@
 								"211,216": "Convert to constant",
 								"259,260": "Initializing field by default value is redundant",
 								"26,31": "Using directive is not used by code and can be removed safely.",
-								"280,287": "Convert to constant"
+								"280,287": "Convert to constant",
+								"313,330": "Convert to constant"
 							},
 							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 216.0,
+						"translation.y": 432.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -167,15 +179,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 506,
+						"buffer_size": 982,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								500,
-								500
+								298,
+								259
 							]
 						],
 						"settings":
@@ -183,15 +195,17 @@
 							"oops":
 							{
 								"0,5": "Using directive is not used by code and can be removed safely.",
-								"26,31": "Using directive is not used by code and can be removed safely."
+								"252,253": "Initializing field by default value is redundant",
+								"26,31": "Using directive is not used by code and can be removed safely.",
+								"273,290": "Convert to constant"
 							},
 							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 288.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]

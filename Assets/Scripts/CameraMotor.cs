@@ -6,6 +6,11 @@ public class CameraMotor : MonoBehaviour {
 
 	private Transform playerTransform;
 	private Vector3 initialDistance;
+	private Vector3 moveVector;
+
+	private float transition = 0.0f;
+	private float animationDuration = 3.0f;
+	private Vector3 animationStartingPos = new Vector3(0, 5, 5);
 
 	// Use this for initialization
 	void Start () {
@@ -15,6 +20,16 @@ public class CameraMotor : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position = playerTransform.position + initialDistance;
+		moveVector = playerTransform.position + initialDistance;
+		moveVector.x = 0.0f;
+
+		if(transition > 1.0f){
+			transform.position = moveVector;
+		}
+		else{
+			transform.position = Vector3.Lerp(moveVector + animationStartingPos, moveVector, transition);
+			transition += (1 / animationDuration) * Time.deltaTime;
+			transform.LookAt(playerTransform.position + Vector3.up);
+		}
 	}
 }
