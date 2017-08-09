@@ -32,15 +32,12 @@
 	"buffers":
 	[
 		{
-			"contents": "using System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\n\npublic class PlayerMotor : MonoBehaviour {\n\n\tprivate CharacterController controller;\n\tprivate Vector3 moveVector;\n\t\n\tprivate float speed = 5.0f;\n\tprivate float verticalVelocity = 0.0f;\n\tprivate float gravity = 10.0f;\n\tprivate float animationDuration = 3.0f;\n\n\t// Use this for initialization\n\tvoid Start () {\n\t\tcontroller = GetComponent<CharacterController> ();\n\t}\n\t\n\t// Update is called once per frame\n\tvoid Update () {\n\n\t\tif(Time.time < animationDuration){\n\t\t\tcontroller.Move(Vector3.forward * speed * Time.deltaTime);\n\t\t\treturn;\n\t\t}\n\n\t\tmoveVector = Vector3.zero;\n\n\t\tif(controller.isGrounded){\n\t\t\tverticalVelocity = 0.0f;\n\t\t}\n\t\telse{\n\t\t\tverticalVelocity -= gravity * Time.deltaTime;\n\t\t}\n\n\t\t//x\n\t\tmoveVector.x = Input.GetAxisRaw(\"Horizontal\") * speed;\n\t\t//y\n\t\tmoveVector.y = verticalVelocity;\n\t\t//z\n\t\tmoveVector.z = speed;\n\n\t\tcontroller.Move (moveVector * Time.deltaTime);\n\t}\n}\n",
 			"file": "Assets/Scripts/PlayerMotor.cs",
-			"file_size": 962,
-			"file_write_time": 131467408293642604,
 			"settings":
 			{
-				"buffer_size": 958,
+				"buffer_size": 959,
 				"encoding": "UTF-8 with BOM",
-				"line_ending": "Unix"
+				"line_ending": "Windows"
 			}
 		},
 		{
@@ -50,6 +47,15 @@
 				"buffer_size": 982,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/Scripts/TileManager.cs",
+			"settings":
+			{
+				"buffer_size": 243,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -132,7 +138,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -141,7 +147,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 958,
+						"buffer_size": 959,
 						"regions":
 						{
 						},
@@ -170,7 +176,7 @@
 						"translation.y": 432.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -202,7 +208,40 @@
 							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 288.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Assets/Scripts/TileManager.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 243,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								72,
+								72
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"107,120": "'MonoBehaviour' is not a known identifier",
+								"66,77": "'UnityEngine' is not a known identifier"
+							},
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

@@ -14,7 +14,7 @@ public class CameraMotor : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		playerTransform = GameObject.FindWithTag("Player").transform;
+		playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
 		initialDistance = transform.position - playerTransform.position;
 	}
 	
