@@ -44,4 +44,8 @@ public class PlayerMotor : MonoBehaviour {
 
 		controller.Move (moveVector * Time.deltaTime);
 	}
+
+	public void set_speed(int modifier){
+		speed = 5.0f + modifier;
+	}
 }

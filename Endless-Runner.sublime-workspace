@@ -4,6 +4,42 @@
 		"selected_items":
 		[
 			[
+				"sco",
+				"score\tfloat"
+			],
+			[
+				"Play",
+				"PlayerMotor\tPlayerMotor"
+			],
+			[
+				"getco",
+				"GetComponent<T>()\tT"
+			],
+			[
+				"scor",
+				"scoreText\tText"
+			],
+			[
+				"spa",
+				"spawn_tile(int prefabIndex = -1)\tvoid"
+			],
+			[
+				"til",
+				"tilePrefabs\tGameObject[]"
+			],
+			[
+				"sp",
+				"spawnZ\tfloat"
+			],
+			[
+				"Findga",
+				"FindGameObjectWithTag(string tag)\tGameObject"
+			],
+			[
+				"F",
+				"FindGameObjectWithTag(string tag)\tGameObject"
+			],
+			[
 				"ani",
 				"animationStartingPos\tVector3"
 			],
@@ -35,7 +71,7 @@
 			"file": "Assets/Scripts/PlayerMotor.cs",
 			"settings":
 			{
-				"buffer_size": 959,
+				"buffer_size": 1028,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
@@ -44,7 +80,7 @@
 			"file": "Assets/Scripts/CameraMotor.cs",
 			"settings":
 			{
-				"buffer_size": 982,
+				"buffer_size": 992,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
@@ -53,7 +89,16 @@
 			"file": "Assets/Scripts/TileManager.cs",
 			"settings":
 			{
-				"buffer_size": 243,
+				"buffer_size": 1630,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/Scripts/Score.cs",
+			"settings":
+			{
+				"buffer_size": 746,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Unix"
 			}
@@ -138,7 +183,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -147,15 +192,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 959,
+						"buffer_size": 1028,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								296,
-								296
+								1022,
+								1022
 							]
 						],
 						"settings":
@@ -163,20 +208,20 @@
 							"oops":
 							{
 								"0,5": "Using directive is not used by code and can be removed safely.",
-								"211,216": "Convert to constant",
 								"259,260": "Initializing field by default value is redundant",
 								"26,31": "Using directive is not used by code and can be removed safely.",
 								"280,287": "Convert to constant",
-								"313,330": "Convert to constant"
+								"313,330": "Convert to constant",
+								"971,980": "'set_speed' should start with an upper case letter. (Rule 'Methods')"
 							},
 							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 432.0,
+						"translation.y": 792.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -185,15 +230,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 982,
+						"buffer_size": 992,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								298,
-								259
+								463,
+								463
 							]
 						],
 						"settings":
@@ -207,11 +252,11 @@
 							},
 							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
 						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.x": -0.0,
+						"translation.y": 360.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -220,28 +265,72 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 243,
+						"buffer_size": 1630,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								72,
-								72
+								633,
+								633
 							]
 						],
 						"settings":
 						{
 							"oops":
 							{
-								"107,120": "'MonoBehaviour' is not a known identifier",
-								"66,77": "'UnityEngine' is not a known identifier"
+								"0,5": "Using directive is not used by code and can be removed safely.",
+								"1015,1016": "Type cast is redundant",
+								"1091,1092": "Type cast is redundant",
+								"145,156": "Name should have prefix '_'. (Rule 'Fields').",
+								"219,220": "Initializing field by default value is redundant",
+								"240,250": "Convert to constant",
+								"273,285": "Convert to constant",
+								"306,314": "Convert to constant",
+								"355,356": "Initializing field by default value is redundant",
+								"935,1256": "Convert to '?:' expression"
 							},
 							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 216.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Assets/Scripts/Score.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 746,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								552,
+								552
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"0,5": "Using directive is not used by code and can be removed safely.",
+								"152,161": "Name should have prefix '_'. (Rule 'Fields').",
+								"187,188": "Initializing field by default value is redundant",
+								"240,258": "Convert to constant",
+								"26,31": "Using directive is not used by code and can be removed safely."
+							},
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 288.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -335,7 +424,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 230.0,
+	"side_bar_width": 184.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
