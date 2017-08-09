@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Score : MonoBehaviour {
 	public Text scoreText;
+	public DeathMenu deathMenu;
 
 	private float score = 0.0f;
 	private int difficultyLevel = 1;
@@ -45,5 +46,6 @@ public class Score : MonoBehaviour {
 
 	public void OnDeath(){
 		isPlayerDead = true;
+		deathMenu.ToggleEndMenu(score);
 	}
 }
