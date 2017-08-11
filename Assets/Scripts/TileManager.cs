@@ -8,9 +8,9 @@ public class TileManager : MonoBehaviour {
 
 	private Transform playerTransform;
 	private float spawnZ = 0.0f;
-	private float tileLength = 10.0f;
-	private int tileOnScreen = 7;
-	private float safeZone = 15.0f;
+	private float tileLength = 20.0f;
+	private int tileOnScreen = 5;
+	private float safeZone = 30.0f;
 	private int lastPrefabIndex = 0;
 	private List<GameObject> activeTiles;
 

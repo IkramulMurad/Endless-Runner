@@ -4,27 +4,28 @@ using UnityEngine;
 
 public class PlayerMotor : MonoBehaviour {
 
-	private CharacterController controller;
+	private Rigidbody rb;
 	private Vector3 moveVector;
 	
 	private float speed = 5.0f;
-	private float verticalVelocity = 0.0f;
-	private float gravity = 10.0f;
-	private bool isDead = false;
-	private float startTime;
-
-	private float currentX;
+	private float jumpSpeed = 5.0f;
+	private bool isDead;
+	private bool canJump;
 	private float deltaX;
 
+	private float startTime;
 	private float animationDuration = 3.0f;
 
 	// Use this for initialization
 	void Start () {
+		isDead = false;
+		canJump = true;
 		startTime = Time.time;
-		controller = GetComponent<CharacterController> ();
+		rb = GetComponent<Rigidbody>();
 	}
 	
 	// Update is called once per frame
+	//to rewrite
 	void Update () {
 
 		if(isDead){
@@ -32,27 +33,9 @@ public class PlayerMotor : MonoBehaviour {
 		}
 
 		if(Time.time - startTime < animationDuration){
-			controller.Move(Vector3.forward * speed * Time.deltaTime);
+			//rb.AddForce(Vector3.forward * speed * Time.deltaTime);
 			return;
 		}
-
-		moveVector = Vector3.zero;
-
-		if(controller.isGrounded){
-			verticalVelocity = 0.0f;
-		}
-		else{
-			verticalVelocity -= gravity * Time.deltaTime;
-		}
-
-		//x
-		//moveVector.x = Input.GetAxisRaw("Horizontal") * speed;
-		//y
-		moveVector.y = verticalVelocity;
-		//z
-		moveVector.z = speed;
-
-		controller.Move (moveVector * Time.deltaTime);
 
 		//player movement through x axis
 		if (Input.GetKeyDown(KeyCode.RightArrow)) {
@@ -73,16 +56,34 @@ public class PlayerMotor : MonoBehaviour {
 			transform.position += new Vector3 (deltaX, 0.0f, 0.0f);
 			//Debug.Log(transform.position.x);
 		}
+
+		//player movement through y axis
+		if(Input.GetKeyDown(KeyCode.UpArrow)){
+			jump();
+		}
+
+		//player movement through z axis
+
+	}
+
+	private void jump(){
+		if(canJump){
+			rb.AddForce(Vector3.up * jumpSpeed * 100);
+			canJump = false;
+		}
 	}
 
 	public void set_speed(int modifier){
 		speed = 5.0f + modifier;
 	}
 
-	private void OnControllerColliderHit(ControllerColliderHit hit){
-		if(hit.collider.tag == "Enemy"){
+	private void OnCollisionEnter(Collision hit){
+		if(hit.gameObject.tag.Contains("Enemy")){
 			dead();
-			//Debug.Log(hit.collider.tag);
+		}
+
+		if(hit.gameObject.tag.Contains("Tile")){
+			canJump = true;
 		}
 	}
 
