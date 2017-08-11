@@ -11,11 +11,14 @@ public class CameraMotor : MonoBehaviour {
 	private float transition = 0.0f;
 	private float animationDuration = 3.0f;
 	private Vector3 animationStartingPos = new Vector3(0, 5, 5);
+	private float fixedY;
 
 	// Use this for initialization
 	void Start () {
 		playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
 		initialDistance = transform.position - playerTransform.position;
+
+		fixedY = transform.position.y;
 	}
 	
 	// Update is called once per frame
@@ -24,6 +27,7 @@ public class CameraMotor : MonoBehaviour {
 		moveVector.x = 0.0f;
 
 		if(transition > 1.0f){
+			moveVector.y = fixedY;
 			transform.position = moveVector;
 		}
 		else{
