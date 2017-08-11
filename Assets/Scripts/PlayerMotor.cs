@@ -9,10 +9,12 @@ public class PlayerMotor : MonoBehaviour {
 	
 	private float speed = 5.0f;
 	private float jumpSpeed = 5.0f;
-	private float jumpFactor = 80.0f;
+	private float jumpFactor = 100.0f;
 	private bool isDead;
 	private bool canJump;
 	private float deltaX;
+	private float xUnit = 2.0f;
+	private float eps = 0.1f;
 
 	private float startTime;
 	private float animationDuration = 3.0f;
@@ -41,18 +43,18 @@ public class PlayerMotor : MonoBehaviour {
 
 		//player movement through x axis
 		if (Input.GetKeyDown(KeyCode.RightArrow)) {
-			if (transform.position.x == 2.0f)
+			if (Mathf.Abs(transform.position.x - xUnit) < eps)
 				deltaX = 0;
 			else
-				deltaX = 2.0f;
+				deltaX = xUnit;
 
 			transform.position += new Vector3 (deltaX, 0.0f, 0.0f);
 		}
 		if (Input.GetKeyDown(KeyCode.LeftArrow)) {
-			if (transform.position.x == -2.0f)
+			if (Mathf.Abs(transform.position.x + xUnit) < eps)
 				deltaX = 0;
 			else
-				deltaX = -2.0f;
+				deltaX = -xUnit;
 
 			transform.position += new Vector3 (deltaX, 0.0f, 0.0f);
 		}
