@@ -41,7 +41,7 @@ public class Score : MonoBehaviour {
 		scoreToNextLevel *= 2;
 		difficultyLevel++;
 
-		GetComponent<PlayerMotor>().set_speed(difficultyLevel);
+		GetComponent<PlayerMotor>().set_speed(difficultyLevel-1);
 	}
 
 	public void OnDeath(){

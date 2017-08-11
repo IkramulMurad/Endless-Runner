@@ -9,6 +9,7 @@ public class PlayerMotor : MonoBehaviour {
 	
 	private float speed = 5.0f;
 	private float jumpSpeed = 5.0f;
+	private float jumpFactor = 80.0f;
 	private bool isDead;
 	private bool canJump;
 	private float deltaX;
@@ -33,9 +34,10 @@ public class PlayerMotor : MonoBehaviour {
 		}
 
 		if(Time.time - startTime < animationDuration){
-			//rb.AddForce(Vector3.forward * speed * Time.deltaTime);
+			transform.Translate(Vector3.forward * speed * Time.deltaTime);
 			return;
 		}
+
 
 		//player movement through x axis
 		if (Input.GetKeyDown(KeyCode.RightArrow)) {
@@ -45,7 +47,6 @@ public class PlayerMotor : MonoBehaviour {
 				deltaX = 2.0f;
 
 			transform.position += new Vector3 (deltaX, 0.0f, 0.0f);
-			//Debug.Log(transform.position.x);
 		}
 		if (Input.GetKeyDown(KeyCode.LeftArrow)) {
 			if (transform.position.x == -2.0f)
@@ -54,7 +55,6 @@ public class PlayerMotor : MonoBehaviour {
 				deltaX = -2.0f;
 
 			transform.position += new Vector3 (deltaX, 0.0f, 0.0f);
-			//Debug.Log(transform.position.x);
 		}
 
 		//player movement through y axis
@@ -63,12 +63,12 @@ public class PlayerMotor : MonoBehaviour {
 		}
 
 		//player movement through z axis
-
+		transform.Translate(Vector3.forward * speed * Time.deltaTime);
 	}
 
 	private void jump(){
 		if(canJump){
-			rb.AddForce(Vector3.up * jumpSpeed * 100);
+			rb.AddForce(Vector3.up * jumpSpeed * jumpFactor);
 			canJump = false;
 		}
 	}
