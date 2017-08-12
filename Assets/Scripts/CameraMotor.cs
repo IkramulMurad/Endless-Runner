@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraMotor : MonoBehaviour {
 
 	private Transform playerTransform;
-	private Vector3 initialDistance;
+	public Vector3 initialDistance;
 	private Vector3 moveVector;
 
 	private float transition = 0.0f;
