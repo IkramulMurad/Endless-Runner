@@ -87,6 +87,11 @@ public class PlayerMotor : MonoBehaviour {
 		if(hit.gameObject.tag.Contains("Tile")){
 			canJump = true;
 		}
+
+		if(hit.gameObject.tag.Contains("Power")){
+			Destroy(hit.gameObject);
+			GameObject.Find("Main Camera").GetComponent<CameraShake>().shakecamera();
+		}
 	}
 
 	private void dead(){

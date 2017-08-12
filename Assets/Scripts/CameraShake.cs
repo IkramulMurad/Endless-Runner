@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraShake : MonoBehaviour {
+	private GameObject player;
+	private Vector3 initialDistance;
+
 	// Transform of the camera to shake. Grabs the gameObject's transform if null.
 	public Transform camTransform;
 
@@ -31,6 +34,8 @@ public class CameraShake : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		shakeDurationStore = shakeDuration;
+		player = GameObject.FindGameObjectWithTag("Player");
+		initialDistance = gameObject.GetComponent<CameraMotor>().initialDistance;
 	}
 
 
@@ -38,7 +43,9 @@ public class CameraShake : MonoBehaviour {
 	void Update() {
 		if (shaketrue) {
 			if (shakeDuration > 0) {
-				camTransform.localPosition = originalPos + Random.insideUnitSphere * shakeAmount;
+				Vector3 pos = originalPos + Random.insideUnitSphere * shakeAmount;
+				pos.z = player.transform.position.z + initialDistance.z;
+				camTransform.localPosition = pos;
 				shakeDuration -= Time.deltaTime * decreaseFactor;
 			} else {
 				shakeDuration = shakeDurationStore;
