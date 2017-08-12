@@ -6,11 +6,12 @@ public class PlayerMotor : MonoBehaviour {
 
 	private Rigidbody rb;
 	private Vector3 moveVector;
-	
-	private float speed = 5.0f;
+	public bool isDead;
+
+	private float speed = 10.0f;
+	private float initSpeed = 10.0f;
 	private float jumpSpeed = 5.0f;
 	private float jumpFactor = 100.0f;
-	private bool isDead;
 	private bool canJump;
 	private float deltaX;
 	private float xUnit = 2.0f;
@@ -18,6 +19,8 @@ public class PlayerMotor : MonoBehaviour {
 
 	private float startTime;
 	private float animationDuration = 3.0f;
+	private AudioSource deathSound;
+	private AudioSource powerSound;
 
 	// Use this for initialization
 	void Start () {
@@ -25,6 +28,7 @@ public class PlayerMotor : MonoBehaviour {
 		canJump = true;
 		startTime = Time.time;
 		rb = GetComponent<Rigidbody>();
+		deathSound = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -76,11 +80,12 @@ public class PlayerMotor : MonoBehaviour {
 	}
 
 	public void set_speed(int modifier){
-		speed = 5.0f + modifier;
+		speed = initSpeed + modifier;
 	}
 
 	private void OnCollisionEnter(Collision hit){
 		if(hit.gameObject.tag.Contains("Enemy")){
+			deathSound.Play();
 			dead();
 		}
 
@@ -89,6 +94,8 @@ public class PlayerMotor : MonoBehaviour {
 		}
 
 		if(hit.gameObject.tag.Contains("Power")){
+			powerSound = hit.gameObject.transform.parent.gameObject.GetComponent<AudioSource>();
+			powerSound.Play();
 			Destroy(hit.gameObject);
 			GameObject.Find("Main Camera").GetComponent<CameraShake>().shakecamera();
 		}
