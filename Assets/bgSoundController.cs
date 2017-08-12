@@ -17,7 +17,7 @@ public class bgSoundController : MonoBehaviour {
 
 		if (isDead) {
 			if (audio.volume > 0.2) {
-				audio.volume -= 0.05f * Time.deltaTime;
+				audio.volume -= 0.1f * Time.deltaTime;
 			}
 		}
 	}
