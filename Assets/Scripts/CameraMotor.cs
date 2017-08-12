@@ -24,10 +24,20 @@ public class CameraMotor : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		moveVector = playerTransform.position + initialDistance;
-		moveVector.x = 0.0f;
+
+		// Let the camera shake when needed.
+		if (gameObject.GetComponent<CameraShake> ().shaketrue == false) {
+			moveVector.x = 0.0f;
+		}
 
 		if(transition > 1.0f){
-			moveVector.y = fixedY;
+			if (gameObject.GetComponent<CameraShake> ().shaketrue == false) {
+				moveVector.y = fixedY;
+			} else {
+				moveVector.x = transform.position.x;
+				moveVector.y = transform.position.y;
+			}
+
 			transform.position = moveVector;
 		}
 		else{
