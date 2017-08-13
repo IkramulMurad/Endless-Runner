@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"lo",
+				"localScale\tVector3 { get; set; }"
+			],
+			[
+				"Getch",
+				"GetComponentsInChildren(List<T> results)\tvoid"
+			],
+			[
+				"getch",
+				"GetComponentsInChildren<T>()\tT[]"
+			],
+			[
+				"sc",
+				"localScale\tVector3 { get; set; }"
+			],
+			[
+				"til",
+				"tile\tGameObject"
+			],
+			[
 				"po",
 				"positionChanged\tbool"
 			],
@@ -112,10 +132,6 @@
 				"spawn_tile(int prefabIndex = -1)\tvoid"
 			],
 			[
-				"til",
-				"tilePrefabs\tGameObject[]"
-			],
-			[
 				"sp",
 				"spawnZ\tfloat"
 			],
@@ -164,7 +180,7 @@
 			"file": "Assets/Scripts/TileManager.cs",
 			"settings":
 			{
-				"buffer_size": 1630,
+				"buffer_size": 1941,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
@@ -306,7 +322,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -358,15 +374,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1630,
+						"buffer_size": 1941,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1231,
-								1231
+								1297,
+								1566
 							]
 						],
 						"settings":
@@ -374,23 +390,23 @@
 							"oops":
 							{
 								"0,5": "Using directive is not used by code and can be removed safely.",
-								"1015,1016": "Type cast is redundant",
-								"1091,1092": "Type cast is redundant",
+								"1049,1050": "Type cast is redundant",
+								"1125,1126": "Type cast is redundant",
 								"145,156": "Name should have prefix '_'. (Rule 'Fields').",
 								"219,220": "Initializing field by default value is redundant",
 								"240,250": "Convert to constant",
-								"273,285": "Convert to constant",
-								"306,314": "Convert to constant",
-								"355,356": "Initializing field by default value is redundant",
-								"935,937": "Convert to '?:' expression"
+								"307,319": "Convert to constant",
+								"340,348": "Convert to constant",
+								"389,390": "Initializing field by default value is redundant",
+								"969,971": "Convert to '?:' expression"
 							},
 							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1224.0,
+						"translation.y": 1008.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -424,7 +440,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -458,7 +474,7 @@
 						"translation.y": 72.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
