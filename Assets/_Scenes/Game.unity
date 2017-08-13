@@ -25,7 +25,7 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SkyboxMaterial: {fileID: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: e54f0bee216166c41a77ba61a0a8543b, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -36,8 +36,8 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_Sun: {fileID: 410471193}
+  m_IndirectSpecularColor: {r: 0.24009901, g: 0.5833642, b: 0.9913983, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -420,8 +420,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilePrefabs:
-  - {fileID: 1458875958362648, guid: 8b893b4e9de6ea14c8d77982d7494120, type: 2}
-  - {fileID: 1533609184754408, guid: 29527d2e28b7fef4f82897a8c0f18fa2, type: 2}
+  - {fileID: 1348969622350958, guid: 3cd257f664c60044e85f70e5dfcc21aa, type: 2}
+  - {fileID: 1160824181650450, guid: 29cb409d2dd05214681090c68bb62741, type: 2}
   - {fileID: 1437065736243112, guid: 6f9c697ff62eb1140becccb2d1f72ca1, type: 2}
   - {fileID: 1329268129092282, guid: f3f657aaa01f25d489e6e51259caa805, type: 2}
   - {fileID: 1148655948176230, guid: 61f7b01554cabb742a0aba3e97c833ed, type: 2}
