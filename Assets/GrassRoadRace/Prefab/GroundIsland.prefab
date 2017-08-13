@@ -8,6 +8,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 420504}
+  - component: {fileID: 114894454182432082}
   m_Layer: 0
   m_Name: GroundIsland
   m_TagString: Untagged
@@ -246,3 +247,14 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 120504}
   m_IsPrefabParent: 1
+--- !u!114 &114894454182432082
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 120504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc7ee7a6ca244d243bfccc198e9e6ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
