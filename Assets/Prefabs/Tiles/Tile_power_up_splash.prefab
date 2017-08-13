@@ -76,7 +76,6 @@ GameObject:
   - component: {fileID: 23386694848065966}
   - component: {fileID: 82512628697081444}
   - component: {fileID: 114376793564103016}
-  - component: {fileID: 114450540902150622}
   m_Layer: 0
   m_Name: Power
   m_TagString: Power_splash
@@ -520,17 +519,6 @@ AudioSource:
     m_PostInfinity: 2
     m_RotationOrder: 0
 --- !u!114 &114376793564103016
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1153665146283592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c5021e7f14f52e418a89589d068e3c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114450540902150622
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

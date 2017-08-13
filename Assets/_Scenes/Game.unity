@@ -955,6 +955,11 @@ Prefab:
       propertyPath: deathMenu
       value: 
       objectReference: {fileID: 852991458}
+    - target: {fileID: 114329266334996860, guid: f6cb3d6ee3d37d440ad364a4f2de979c,
+        type: 2}
+      propertyPath: powerMenu
+      value: 
+      objectReference: {fileID: 1713491095}
     m_RemovedComponents:
     - {fileID: 143853887203193902, guid: f6cb3d6ee3d37d440ad364a4f2de979c, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: f6cb3d6ee3d37d440ad364a4f2de979c, type: 2}
