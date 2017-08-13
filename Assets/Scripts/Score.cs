@@ -6,8 +6,9 @@ using UnityEngine.UI;
 public class Score : MonoBehaviour {
 	public Text scoreText;
 	public DeathMenu deathMenu;
+	public PowerUpMenu powerMenu;
 
-	private float score = 0.0f;
+	public float score = 0.0f;
 	private int difficultyLevel = 1;
 	private int maxDifficultyLevel = 50;
 	private int scoreToNextLevel = 10;
@@ -57,5 +58,9 @@ public class Score : MonoBehaviour {
 			PlayerPrefs.SetFloat("Highscore", score);
 		}
 
+	}
+
+	public void OnPowerUp(){
+		powerMenu.TogglePowerMenu();
 	}
 }

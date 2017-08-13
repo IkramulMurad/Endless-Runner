@@ -83,4 +83,15 @@ public class TileManager : MonoBehaviour {
 		lastPrefabIndex = randomIndex;
 		return randomIndex;
 	}
+
+	public void kill_all_enemy(){
+		foreach(GameObject tile in activeTiles){
+			Transform[] tilesChildren = tile.GetComponentsInChildren<Transform>();
+			foreach(Transform child in tilesChildren){
+				if(child.gameObject.tag.Contains("Enemy")){
+					Destroy(child.gameObject);
+				}
+			}
+		}
+	}
 }
