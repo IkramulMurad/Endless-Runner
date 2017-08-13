@@ -40,6 +40,7 @@ public class TileManager : MonoBehaviour {
 
 	private void spawn_tile(int prefabIndex = -1){
 		GameObject tile;
+		currentTileLength = 0.0f;
 
 		if(prefabIndex == -1){
 			tile = Instantiate(tilePrefabs[random_prefab_index()]) as GameObject;	
@@ -55,11 +56,11 @@ public class TileManager : MonoBehaviour {
 
 
 		Transform[] tilesChildren = tile.GetComponentsInChildren<Transform>();
-		foreach(Transform child in tilesChildren){
-			if(child.gameObject.tag.Contains("Tile")){
-				currentTileLength = child.gameObject.transform.localScale.z;
-			}
-		}
+        foreach(Transform child in tilesChildren){
+            if(child.gameObject.tag.Contains("Tile")){
+                currentTileLength += child.GetComponent<Renderer>().bounds.size.z;
+            }
+        }
 		
 		spawnZ += currentTileLength;
 
