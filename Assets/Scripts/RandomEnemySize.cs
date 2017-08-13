@@ -21,7 +21,7 @@ public class RandomEnemySize : MonoBehaviour {
 
 		int randomNumber = Random.Range(0, 10);
 
-		if(randomNumber >= 8){
+		if(randomNumber % 2 == 0){
 			Vector3 scale = transform.localScale;
 			Vector3 pos = transform.position;
 			scale.y *= 2;
