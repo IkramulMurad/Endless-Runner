@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,7 +8,8 @@ public class TileManager : MonoBehaviour {
 
 	private Transform playerTransform;
 	private float spawnZ = 0.0f;
-	private float tileLength = 18.0f;
+	private float tileLength = 20.0f;
+	private float currentTileLength;
 	private int tileOnScreen = 5;
 	private float safeZone = 30.0f;
 	private int lastPrefabIndex = 0;
@@ -39,6 +40,7 @@ public class TileManager : MonoBehaviour {
 
 	private void spawn_tile(int prefabIndex = -1){
 		GameObject tile;
+		currentTileLength = 0.0f;
 
 		if(prefabIndex == -1){
 			tile = Instantiate(tilePrefabs[random_prefab_index()]) as GameObject;	
@@ -49,8 +51,24 @@ public class TileManager : MonoBehaviour {
 		
 		tile.transform.SetParent(transform);
 		tile.transform.position = Vector3.forward * spawnZ;
-		spawnZ += tileLength;
+		//spawnZ += tileLength;
 		activeTiles.Add(tile);
+
+
+		Transform[] tilesChildren = tile.GetComponentsInChildren<Transform>();
+		foreach(Transform child in tilesChildren){
+			if(child.gameObject.tag.Contains("Tile")){
+				currentTileLength += child.GetComponent<Renderer>().bounds.size.z;
+				print (child.gameObject.transform.name);
+				print (child.GetComponent<Renderer>().bounds.size.z);
+			}
+		}
+
+		print(tile.gameObject.transform.name);
+		print(currentTileLength);
+		
+		spawnZ += currentTileLength;
+
 	}
 
 	private void delete_tile(){
