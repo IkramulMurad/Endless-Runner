@@ -9,6 +9,7 @@ public class TileManager : MonoBehaviour {
 	private Transform playerTransform;
 	private float spawnZ = 0.0f;
 	private float tileLength = 20.0f;
+	private float currentTileLength;
 	private int tileOnScreen = 5;
 	private float safeZone = 30.0f;
 	private int lastPrefabIndex = 0;
@@ -49,8 +50,19 @@ public class TileManager : MonoBehaviour {
 		
 		tile.transform.SetParent(transform);
 		tile.transform.position = Vector3.forward * spawnZ;
-		spawnZ += tileLength;
+		//spawnZ += tileLength;
 		activeTiles.Add(tile);
+
+
+		Transform[] tilesChildren = tile.GetComponentsInChildren<Transform>();
+		foreach(Transform child in tilesChildren){
+			if(child.gameObject.tag.Contains("Tile")){
+				currentTileLength = child.gameObject.transform.localScale.z;
+			}
+		}
+		
+		spawnZ += currentTileLength;
+
 	}
 
 	private void delete_tile(){
