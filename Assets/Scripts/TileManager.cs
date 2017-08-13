@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class TileManager : MonoBehaviour {
 
+	public GameObject treePrefabs;
 	public GameObject[] tilePrefabs;
 
 	private Transform playerTransform;
 	private float spawnZ = 0.0f;
 	private float tileLength = 20.0f;
 	private float currentTileLength;
-	private int tileOnScreen = 5;
+	private int tileOnScreen = 6;
 	private float safeZone = 30.0f;
 	private int lastPrefabIndex = 0;
 	private List<GameObject> activeTiles;
@@ -35,6 +36,7 @@ public class TileManager : MonoBehaviour {
 		if((playerTransform.position.z - safeZone) > (spawnZ - tileOnScreen * tileLength)){
 			spawn_tile();
 			delete_tile();
+			spawn_tree();
 		}
 	}
 
@@ -43,10 +45,10 @@ public class TileManager : MonoBehaviour {
 		currentTileLength = 0.0f;
 
 		if(prefabIndex == -1){
-			tile = Instantiate(tilePrefabs[random_prefab_index()]) as GameObject;	
+			tile = Instantiate(tilePrefabs[random_prefab_index()]) as GameObject;
 		}
 		else{
-			tile = Instantiate(tilePrefabs[prefabIndex]) as GameObject;	
+			tile = Instantiate(tilePrefabs[prefabIndex]) as GameObject;
 		}
 		
 		tile.transform.SetParent(transform);
@@ -69,6 +71,16 @@ public class TileManager : MonoBehaviour {
 	private void delete_tile(){
 		Destroy(activeTiles[0]);
 		activeTiles.RemoveAt(0);
+	}
+
+	private void spawn_tree(){
+		GameObject tree = Instantiate(treePrefabs) as GameObject;
+		float side = ( 0.5f - Random.Range(0.0f,1.0f) > 0 ) ? 1.0f : -1.0f;
+		float size = Random.Range(0.8f,1.5f);
+
+		tree.transform.SetParent(transform);
+		tree.transform.position = new Vector3( side * 5.0f, 0.0f, spawnZ + Random.Range(-5.0f, 5.0f) );
+		tree.transform.localScale = new Vector3( size, size, size );
 	}
 
 	private int random_prefab_index(){
