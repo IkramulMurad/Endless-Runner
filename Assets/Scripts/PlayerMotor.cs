@@ -93,7 +93,7 @@ public class PlayerMotor : MonoBehaviour {
 			canJump = true;
 		}
 
-		if(hit.gameObject.tag.Contains("Power")){
+		if(hit.gameObject.tag.Contains("Power_shake")){
 			powerSound = hit.gameObject.transform.parent.gameObject.GetComponent<AudioSource>();
 			powerSound.Play();
 			Destroy(hit.gameObject);

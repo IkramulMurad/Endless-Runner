@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - Tile
   - Power
+  - Power_shake
+  - Power_splash
   layers:
   - Default
   - TransparentFX
