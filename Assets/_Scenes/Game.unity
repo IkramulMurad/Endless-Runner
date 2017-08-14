@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 410471193}
-  m_IndirectSpecularColor: {r: 0.24009901, g: 0.5833642, b: 0.9913983, a: 1}
+  m_IndirectSpecularColor: {r: 0.23992604, g: 0.5833612, b: 0.99048537, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -428,6 +428,7 @@ MonoBehaviour:
   - {fileID: 1148655948176230, guid: 61f7b01554cabb742a0aba3e97c833ed, type: 2}
   - {fileID: 1130545941151492, guid: 2c61fce57988bcb4985ca70904f9c70a, type: 2}
   - {fileID: 1533609184754408, guid: 29527d2e28b7fef4f82897a8c0f18fa2, type: 2}
+  wavePrefab: {fileID: 1643061366708884, guid: 4c459ac0d27be1d4398bac860719873d, type: 2}
 --- !u!4 &539302507
 Transform:
   m_ObjectHideFlags: 0
