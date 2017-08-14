@@ -76,6 +76,8 @@ public class PlayerMotor : MonoBehaviour {
 		if(canJump){
 			rb.AddForce(Vector3.up * jumpSpeed * jumpFactor);
 			canJump = false;
+			Transform skin = this.gameObject.transform.Find("Skin");
+			skin.GetComponent<Animation>().Play("Win");
 		}
 	}
 
@@ -86,11 +88,17 @@ public class PlayerMotor : MonoBehaviour {
 	private void OnCollisionEnter(Collision hit){
 		if(hit.gameObject.tag.Contains("Enemy")){
 			deathSound.Play();
+			Transform skin = this.gameObject.transform.Find("Skin");
+			skin.GetComponent<Animation>().Play("Death");
 			dead();
 		}
 
 		if(hit.gameObject.tag.Contains("Tile")){
 			canJump = true;
+			if (!isDead) {
+				Transform skin = this.gameObject.transform.Find("Skin");
+				skin.GetComponent<Animation>().Play("Run");
+			}
 		}
 
 		if(hit.gameObject.tag.Contains("Power_shake")){
