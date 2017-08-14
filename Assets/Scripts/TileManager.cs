@@ -113,10 +113,13 @@ public class TileManager : MonoBehaviour {
 		GameObject tree = Instantiate(treePrefabs) as GameObject;
 		float side = ( 0.5f - Random.Range(0.0f,1.0f) > 0 ) ? 1.0f : -1.0f;
 		float size = Random.Range(0.8f,1.5f);
+		int[] rotation = { 0, 90, 180, 270 };
+		int r = Random.Range(0,4);
 
 		tree.transform.SetParent(transform);
 		tree.transform.position = new Vector3( side * 5.0f, 0.0f, spawnZ + Random.Range(-5.0f, 5.0f) );
 		tree.transform.localScale = new Vector3( size, size, size );
+		tree.transform.rotation = Quaternion.Euler( 0, rotation[r], 0 );
 	}
 
 	private int random_prefab_index(){

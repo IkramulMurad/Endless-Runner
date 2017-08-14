@@ -6,7 +6,7 @@ public class DestroyIsland : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Destroy(this.gameObject, 10.0f);
+		Destroy(this.gameObject, 12.0f);
 	}
 
 }
