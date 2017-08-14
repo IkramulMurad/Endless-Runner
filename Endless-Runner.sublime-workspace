@@ -4,6 +4,138 @@
 		"selected_items":
 		[
 			[
+				"Ti",
+				"TileManager\tTileManager"
+			],
+			[
+				"to",
+				"TogglePowerMenu(bool turn)\tvoid"
+			],
+			[
+				"T",
+				"ToggleEndMenu(bool turn)\tvoid"
+			],
+			[
+				"on",
+				"OnPowerUp()\tvoid"
+			],
+			[
+				"for",
+				"foreach\tforeach"
+			],
+			[
+				"anima",
+				"animationTime\tfloat"
+			],
+			[
+				"lo",
+				"localScale\tVector3 { get; set; }"
+			],
+			[
+				"Getch",
+				"GetComponentsInChildren(List<T> results)\tvoid"
+			],
+			[
+				"getch",
+				"GetComponentsInChildren<T>()\tT[]"
+			],
+			[
+				"sc",
+				"localScale\tVector3 { get; set; }"
+			],
+			[
+				"til",
+				"tile\tGameObject"
+			],
+			[
+				"po",
+				"positionChanged\tbool"
+			],
+			[
+				"Sc",
+				"localScale\tVector3 { get; set; }"
+			],
+			[
+				"p",
+				"position\tVector3 { get; set; }"
+			],
+			[
+				"is",
+				"isIncreased\tbool"
+			],
+			[
+				"Ma",
+				"Mathf\tMathf"
+			],
+			[
+				"tr",
+				"Translate(Vector3 translation)\tvoid"
+			],
+			[
+				"fix",
+				"fixedY\tfloat"
+			],
+			[
+				"ju",
+				"jumpSpeed\tfloat"
+			],
+			[
+				"Ve",
+				"Vector3\tVector3"
+			],
+			[
+				"Ke",
+				"KeyCode\tKeyCode"
+			],
+			[
+				"Coll",
+				"Collision\tCollision"
+			],
+			[
+				"pla",
+				"PlayerPrefs\tPlayerPrefs"
+			],
+			[
+				"Pla",
+				"PlayerPrefs\tPlayerPrefs"
+			],
+			[
+				"an",
+				"animationDuration\tfloat"
+			],
+			[
+				"col",
+				"color\tColor { get; set; }"
+			],
+			[
+				"ba",
+				"BackgroundImg\tImage"
+			],
+			[
+				"tra",
+				"transition\tfloat"
+			],
+			[
+				"Scene",
+				"SceneManager\tSceneManager"
+			],
+			[
+				"U",
+				"UnityEngine\tUnityEngine"
+			],
+			[
+				"To",
+				"ToggleEndMenu(float score)\tvoid"
+			],
+			[
+				"t",
+				"tag\tstring { get; set; }"
+			],
+			[
+				"l",
+				"collider\tCollider { get; }"
+			],
+			[
 				"sco",
 				"score\tfloat"
 			],
@@ -24,10 +156,6 @@
 				"spawn_tile(int prefabIndex = -1)\tvoid"
 			],
 			[
-				"til",
-				"tilePrefabs\tGameObject[]"
-			],
-			[
 				"sp",
 				"spawnZ\tfloat"
 			],
@@ -42,10 +170,6 @@
 			[
 				"ani",
 				"animationStartingPos\tVector3"
-			],
-			[
-				"tra",
-				"transform\tTransform { get; }"
 			],
 			[
 				"Get",
@@ -71,16 +195,7 @@
 			"file": "Assets/Scripts/PlayerMotor.cs",
 			"settings":
 			{
-				"buffer_size": 1028,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Assets/Scripts/CameraMotor.cs",
-			"settings":
-			{
-				"buffer_size": 992,
+				"buffer_size": 2611,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
@@ -89,7 +204,34 @@
 			"file": "Assets/Scripts/TileManager.cs",
 			"settings":
 			{
-				"buffer_size": 1630,
+				"buffer_size": 2234,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/Scripts/PowerUpPosition.cs",
+			"settings":
+			{
+				"buffer_size": 554,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/Scripts/RandomEnemySize.cs",
+			"settings":
+			{
+				"buffer_size": 621,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/Scripts/CameraMotor.cs",
+			"settings":
+			{
+				"buffer_size": 1357,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
@@ -98,7 +240,34 @@
 			"file": "Assets/Scripts/Score.cs",
 			"settings":
 			{
-				"buffer_size": 746,
+				"buffer_size": 1231,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/Scripts/MainMenu.cs",
+			"settings":
+			{
+				"buffer_size": 590,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/Scripts/DeathMenu.cs",
+			"settings":
+			{
+				"buffer_size": 907,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/Scripts/PowerUpMenu.cs",
+			"settings":
+			{
+				"buffer_size": 1426,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Unix"
 			}
@@ -145,6 +314,7 @@
 	],
 	"file_history":
 	[
+		"/C/Users/Ikramul Murad/Documents/GitHub/Endless-Runner/Assets/Prefabs/Tiles/Tile_multiple_enemy_1.prefab",
 		"/G/Special/Projects/Endless-Runner/Endless-Runner.sublime-project",
 		"/G/Special/Projects/Endless-Runner/New Unity Project.sln",
 		"/C/Users/Ikramul Murad/Desktop/paper"
@@ -165,6 +335,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"isShown",
+			"controller",
+			";\n",
 			"lookAt"
 		],
 		"highlight": true,
@@ -183,7 +356,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 8,
 			"sheets":
 			[
 				{
@@ -192,15 +365,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1028,
+						"buffer_size": 2611,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1022,
-								1022
+								2523,
+								2523
 							]
 						],
 						"settings":
@@ -208,37 +381,154 @@
 							"oops":
 							{
 								"0,5": "Using directive is not used by code and can be removed safely.",
-								"259,260": "Initializing field by default value is redundant",
+								"1076,1078": "Convert to '?:' expression",
+								"1283,1285": "Convert to '?:' expression",
+								"1771,1780": "'set_speed' should start with an upper case letter. (Rule 'Methods')",
+								"189,195": "Name should have prefix '_'. (Rule 'Fields').",
+								"1963,1965": "Convert to '|=' expresssion",
+								"243,252": "Convert to constant",
 								"26,31": "Using directive is not used by code and can be removed safely.",
-								"280,287": "Convert to constant",
-								"313,330": "Convert to constant",
-								"971,980": "'set_speed' should start with an upper case letter. (Rule 'Methods')"
+								"277,286": "Convert to constant",
+								"310,320": "Convert to constant",
+								"392,397": "Convert to constant",
+								"421,424": "Convert to constant",
+								"475,492": "Convert to constant"
 							},
 							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 792.0,
+						"translation.y": 2160.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "Assets/Scripts/CameraMotor.cs",
+					"file": "Assets/Scripts/TileManager.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 992,
+						"buffer_size": 2234,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								463,
-								463
+								1528,
+								1528
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"0,5": "Using directive is not used by code and can be removed safely.",
+								"1049,1050": "Type cast is redundant",
+								"1125,1126": "Type cast is redundant",
+								"145,156": "Name should have prefix '_'. (Rule 'Fields').",
+								"1953,1967": "'kill_all_enemy' should start with an upper case letter. (Rule 'Methods')",
+								"219,220": "Initializing field by default value is redundant",
+								"240,250": "Convert to constant",
+								"307,319": "Convert to constant",
+								"340,348": "Convert to constant",
+								"389,390": "Initializing field by default value is redundant",
+								"969,971": "Convert to '?:' expression"
+							},
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1872.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Assets/Scripts/PowerUpPosition.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 554,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								548,
+								548
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"0,5": "Using directive is not used by code and can be removed safely.",
+								"160,165": "Initializing field by default value is redundant",
+								"26,31": "Using directive is not used by code and can be removed safely."
+							},
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Assets/Scripts/RandomEnemySize.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 621,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								516,
+								483
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"0,5": "Using directive is not used by code and can be removed safely.",
+								"155,160": "Initializing field by default value is redundant",
+								"26,31": "Using directive is not used by code and can be removed safely."
+							},
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 72.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Assets/Scripts/CameraMotor.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1357,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
@@ -252,69 +542,28 @@
 							},
 							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
 						},
-						"translation.x": -0.0,
-						"translation.y": 360.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "Assets/Scripts/TileManager.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1630,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								633,
-								633
-							]
-						],
-						"settings":
-						{
-							"oops":
-							{
-								"0,5": "Using directive is not used by code and can be removed safely.",
-								"1015,1016": "Type cast is redundant",
-								"1091,1092": "Type cast is redundant",
-								"145,156": "Name should have prefix '_'. (Rule 'Fields').",
-								"219,220": "Initializing field by default value is redundant",
-								"240,250": "Convert to constant",
-								"273,285": "Convert to constant",
-								"306,314": "Convert to constant",
-								"355,356": "Initializing field by default value is redundant",
-								"935,1256": "Convert to '?:' expression"
-							},
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
-						},
 						"translation.x": 0.0,
-						"translation.y": 216.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 5,
 					"file": "Assets/Scripts/Score.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 746,
+						"buffer_size": 1231,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								552,
-								552
+								231,
+								231
 							]
 						],
 						"settings":
@@ -323,14 +572,133 @@
 							{
 								"0,5": "Using directive is not used by code and can be removed safely.",
 								"152,161": "Name should have prefix '_'. (Rule 'Fields').",
-								"187,188": "Initializing field by default value is redundant",
-								"240,258": "Convert to constant",
-								"26,31": "Using directive is not used by code and can be removed safely."
+								"181,190": "Name should have prefix '_'. (Rule 'Fields').",
+								"212,221": "Name should have prefix '_'. (Rule 'Fields').",
+								"238,243": "Name should have prefix '_'. (Rule 'Fields').",
+								"246,247": "Initializing field by default value is redundant",
+								"26,31": "Using directive is not used by code and can be removed safely.",
+								"299,317": "Convert to constant",
+								"390,395": "Initializing field by default value is redundant"
 							},
 							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 288.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "Assets/Scripts/MainMenu.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 590,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								590,
+								590
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"0,5": "Using directive is not used by code and can be removed safely.",
+								"191,204": "Name should have prefix '_'. (Rule 'Fields').",
+								"26,31": "Using directive is not used by code and can be removed safely.",
+								"281,283": "Convert to '?:' expression",
+								"449,450": "Redundant ToString() call",
+								"541,547": "Method 'ToGame' can be made static."
+							},
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "Assets/Scripts/DeathMenu.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 907,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								297,
+								297
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"0,5": "Using directive is not used by code and can be removed safely.",
+								"192,201": "Name should have prefix '_'. (Rule 'Fields').",
+								"218,231": "'BackgroundImg' should start with a lower case letter. (Rule 'Fields')",
+								"257,262": "Initializing field by default value is redundant",
+								"26,31": "Using directive is not used by code and can be removed safely.",
+								"292,293": "Initializing field by default value is redundant",
+								"767,774": "Method 'Restart' can be made static.",
+								"857,863": "Method 'ToMenu' can be made static."
+							},
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 576.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "Assets/Scripts/PowerUpMenu.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1426,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								991,
+								991
+							]
+						],
+						"settings":
+						{
+							"oops":
+							{
+								"0,5": "Using directive is not used by code and can be removed safely.",
+								"101,106": "Using directive is not used by code and can be removed safely.",
+								"194,203": "Name should have prefix '_'. (Rule 'Fields').",
+								"220,233": "'BackgroundImg' should start with a lower case letter. (Rule 'Fields')",
+								"259,264": "Initializing field by default value is redundant",
+								"26,31": "Using directive is not used by code and can be removed safely.",
+								"351,356": "Initializing field by default value is redundant",
+								"855,856": "Comparison with 'false' is redundant"
+							},
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 504.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

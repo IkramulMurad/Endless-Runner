@@ -4,60 +4,106 @@ using UnityEngine;
 
 public class PlayerMotor : MonoBehaviour {
 
-	private CharacterController controller;
+	private Rigidbody rb;
 	private Vector3 moveVector;
-	
-	private float speed = 5.0f;
-	private float verticalVelocity = 0.0f;
-	private float gravity = 10.0f;
-	private bool isDead = false;
+	public bool isDead;
 
+	private float speed = 10.0f;
+	private float initSpeed = 10.0f;
+	private float jumpSpeed = 5.0f;
+	private float jumpFactor = 100.0f;
+	private bool canJump;
+	private float deltaX;
+	private float xUnit = 2.0f;
+	private float eps = 0.1f;
+
+	private float startTime;
 	private float animationDuration = 3.0f;
+	private AudioSource deathSound;
+	private AudioSource powerSound;
 
 	// Use this for initialization
 	void Start () {
-		controller = GetComponent<CharacterController> ();
+		isDead = false;
+		canJump = true;
+		startTime = Time.time;
+		rb = GetComponent<Rigidbody>();
+		deathSound = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
+	//to rewrite
 	void Update () {
 
 		if(isDead){
 			return;
 		}
 
-		if(Time.time < animationDuration){
-			controller.Move(Vector3.forward * speed * Time.deltaTime);
+		if(Time.time - startTime < animationDuration){
+			transform.Translate(Vector3.forward * speed * Time.deltaTime);
 			return;
 		}
 
-		moveVector = Vector3.zero;
 
-		if(controller.isGrounded){
-			verticalVelocity = 0.0f;
+		//player movement through x axis
+		if (Input.GetKeyDown(KeyCode.RightArrow)) {
+			if (Mathf.Abs(transform.position.x - xUnit) < eps)
+				deltaX = 0;
+			else
+				deltaX = xUnit;
+
+			transform.position += new Vector3 (deltaX, 0.0f, 0.0f);
 		}
-		else{
-			verticalVelocity -= gravity * Time.deltaTime;
+		if (Input.GetKeyDown(KeyCode.LeftArrow)) {
+			if (Mathf.Abs(transform.position.x + xUnit) < eps)
+				deltaX = 0;
+			else
+				deltaX = -xUnit;
+
+			transform.position += new Vector3 (deltaX, 0.0f, 0.0f);
 		}
 
-		//x
-		moveVector.x = Input.GetAxisRaw("Horizontal") * speed;
-		//y
-		moveVector.y = verticalVelocity;
-		//z
-		moveVector.z = speed;
+		//player movement through y axis
+		if(Input.GetKeyDown(KeyCode.UpArrow)){
+			jump();
+		}
 
-		controller.Move (moveVector * Time.deltaTime);
+		//player movement through z axis
+		transform.Translate(Vector3.forward * speed * Time.deltaTime);
+	}
+
+	private void jump(){
+		if(canJump){
+			rb.AddForce(Vector3.up * jumpSpeed * jumpFactor);
+			canJump = false;
+		}
 	}
 
 	public void set_speed(int modifier){
-		speed = 5.0f + modifier;
+		speed = initSpeed + modifier;
 	}
 
-	private void OnControllerColliderHit(ControllerColliderHit hit){
-		if(hit.collider.tag == "Enemy"){
+	private void OnCollisionEnter(Collision hit){
+		if(hit.gameObject.tag.Contains("Enemy")){
+			deathSound.Play();
 			dead();
-			//Debug.Log(hit.collider.tag);
+		}
+
+		if(hit.gameObject.tag.Contains("Tile")){
+			canJump = true;
+		}
+
+		if(hit.gameObject.tag.Contains("Power_shake")){
+			powerSound = hit.gameObject.transform.parent.gameObject.GetComponent<AudioSource>();
+			powerSound.Play();
+			Destroy(hit.gameObject);
+			GameObject.Find("Main Camera").GetComponent<CameraShake>().shakecamera();
+		}
+		if(hit.gameObject.tag.Contains("Power_splash")){
+			powerSound = hit.gameObject.transform.parent.gameObject.GetComponent<AudioSource>();
+			powerSound.Play();
+			Destroy(hit.gameObject);
+			GetComponent<Score>().OnPowerUp();
 		}
 	}
 
