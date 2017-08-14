@@ -9,6 +9,7 @@ TagManager:
   - Power
   - Power_shake
   - Power_splash
+  - Wave
   layers:
   - Default
   - TransparentFX

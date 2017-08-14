@@ -6,6 +6,7 @@ public class TileManager : MonoBehaviour {
 
 	public GameObject treePrefabs;
 	public GameObject[] tilePrefabs;
+	public GameObject wavePrefab;
 
 	private Transform playerTransform;
 	private float spawnZ = 0.0f;
@@ -15,6 +16,11 @@ public class TileManager : MonoBehaviour {
 	private float safeZone = 30.0f;
 	private int lastPrefabIndex = 0;
 	private List<GameObject> activeTiles;
+
+	private List<GameObject> activeWaves;
+	private float waveSpawnZ = 0.0f;
+	private float waveLength = 374.0f;
+	private int waveOnScreen = 2;
 
 	// Use this for initialization
 	void Start () {
@@ -29,6 +35,11 @@ public class TileManager : MonoBehaviour {
 				spawn_tile();
 			}
 		}
+
+		activeWaves = new List<GameObject>();
+		for(int i = 0; i < waveOnScreen; ++i){
+			spawn_wave();
+		}
 	}
 	
 	// Update is called once per frame
@@ -37,6 +48,11 @@ public class TileManager : MonoBehaviour {
 			spawn_tile();
 			delete_tile();
 			spawn_tree();
+		}
+
+		if(waveSpawnZ - playerTransform.position.z < waveLength){
+			spawn_wave();
+			delete_wave();
 		}
 	}
 
@@ -71,6 +87,26 @@ public class TileManager : MonoBehaviour {
 	private void delete_tile(){
 		Destroy(activeTiles[0]);
 		activeTiles.RemoveAt(0);
+	}
+
+	//Spawn wave
+	private void spawn_wave(){
+		GameObject wave;
+		wave = Instantiate(wavePrefab) as GameObject;
+
+		wave.transform.SetParent(transform);
+
+		Vector3 temp = wave.transform.position;
+		temp.z = waveSpawnZ;
+		wave.transform.position = temp;
+		
+		waveSpawnZ += waveLength;
+		activeWaves.Add(wave);
+	}
+
+	private void delete_wave(){
+		Destroy(activeWaves[0]);
+		activeWaves.RemoveAt(0);
 	}
 
 	private void spawn_tree(){
