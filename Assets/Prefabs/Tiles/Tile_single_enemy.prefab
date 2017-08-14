@@ -74,7 +74,6 @@ GameObject:
   - component: {fileID: 4867310916525436}
   - component: {fileID: 33214250947826374}
   - component: {fileID: 23220027705225460}
-  - component: {fileID: 114219294594453920}
   - component: {fileID: 65553283528377142}
   m_Layer: 0
   m_Name: Enemy
@@ -135,7 +134,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1533609184754408}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -211.92221, y: 35.542496, z: 52.50879}
+  m_LocalPosition: {x: -2.6112442, y: 2.241067, z: 7.262076}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4749678516961858}
@@ -179,8 +178,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1403196549177362}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.75, z: 10}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalPosition: {x: 0, y: 0.1, z: 10}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 4362752748101702}
   m_RootOrder: 4
@@ -242,7 +241,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 7f6972a3d8b0f174488af99e59e369b1, type: 2}
+  - {fileID: 2100000, guid: 23ba0ba3cbb405f4ebabf83910daf43f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -366,7 +365,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1403196549177362}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: b90ff7e3d8926e44b8c08f957d58ecd0, type: 3}
 --- !u!33 &33556316175828058
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -410,8 +409,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.51126015, y: 2.306539, z: 0.37182206}
+  m_Center: {x: 0.073673844, y: 1.0308607, z: -0.002527237}
 --- !u!65 &65748797814020442
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -424,14 +423,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 61.075676, y: 50.021263, z: 100.00001}
   m_Center: {x: 0.0000076293936, y: -25.010612, z: 49.99999}
---- !u!114 &114219294594453920
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1403196549177362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d72a194331c90e4ab16b021ca8ea4f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
