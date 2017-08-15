@@ -179,13 +179,55 @@ RectTransform:
   - {fileID: 852991455}
   - {fileID: 1713491094}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1001 &59249773
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4956153932760358, guid: 6f9c697ff62eb1140becccb2d1f72ca1, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -5.3523593
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956153932760358, guid: 6f9c697ff62eb1140becccb2d1f72ca1, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -4.0885444
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956153932760358, guid: 6f9c697ff62eb1140becccb2d1f72ca1, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 7.967923
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956153932760358, guid: 6f9c697ff62eb1140becccb2d1f72ca1, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956153932760358, guid: 6f9c697ff62eb1140becccb2d1f72ca1, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956153932760358, guid: 6f9c697ff62eb1140becccb2d1f72ca1, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956153932760358, guid: 6f9c697ff62eb1140becccb2d1f72ca1, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956153932760358, guid: 6f9c697ff62eb1140becccb2d1f72ca1, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6f9c697ff62eb1140becccb2d1f72ca1, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &138737266
 GameObject:
   m_ObjectHideFlags: 0
@@ -390,7 +432,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &413040398
 Prefab:
@@ -486,7 +528,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &549422401
 GameObject:
@@ -1115,7 +1157,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1370741201
 GameObject:
@@ -1177,7 +1219,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1636808558
 GameObject:
@@ -1290,7 +1332,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4892242896926386, guid: f6cb3d6ee3d37d440ad364a4f2de979c, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114329266334996860, guid: f6cb3d6ee3d37d440ad364a4f2de979c,
         type: 2}
@@ -1384,6 +1426,24 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1650498160}
+--- !u!1 &1669089793 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1893978905139882, guid: 6f9c697ff62eb1140becccb2d1f72ca1,
+    type: 2}
+  m_PrefabInternal: {fileID: 59249773}
+--- !u!114 &1669089794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1669089793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d18219750077a640b8dbe31bb2a2d5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changePosition: 1
+  changeRotation: 0
 --- !u!1 &1713491093
 GameObject:
   m_ObjectHideFlags: 0
