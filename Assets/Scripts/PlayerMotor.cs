@@ -13,6 +13,7 @@ public class PlayerMotor : MonoBehaviour {
 	private float jumpSpeed = 5.0f;
 	private float jumpFactor = 100.0f;
 	private bool canJump;
+	private bool ableToChangeLane;
 	private float deltaX;
 	private float xUnit = 2.0f;
 	private float eps = 0.1f;
@@ -26,6 +27,7 @@ public class PlayerMotor : MonoBehaviour {
 	void Start () {
 		isDead = false;
 		canJump = true;
+		ableToChangeLane = true;
 		startTime = Time.time;
 		rb = GetComponent<Rigidbody>();
 		deathSound = GetComponent<AudioSource>();
@@ -46,7 +48,7 @@ public class PlayerMotor : MonoBehaviour {
 
 
 		//player movement through x axis
-		if (Input.GetKeyDown(KeyCode.RightArrow)) {
+		if (Input.GetKeyDown(KeyCode.RightArrow) && ableToChangeLane) {
 			if (Mathf.Abs(transform.position.x - xUnit) < eps)
 				deltaX = 0;
 			else
@@ -54,7 +56,7 @@ public class PlayerMotor : MonoBehaviour {
 
 			transform.position += new Vector3 (deltaX, 0.0f, 0.0f);
 		}
-		if (Input.GetKeyDown(KeyCode.LeftArrow)) {
+		if (Input.GetKeyDown(KeyCode.LeftArrow) && ableToChangeLane) {
 			if (Mathf.Abs(transform.position.x + xUnit) < eps)
 				deltaX = 0;
 			else
@@ -76,6 +78,7 @@ public class PlayerMotor : MonoBehaviour {
 		if(canJump){
 			rb.AddForce(Vector3.up * jumpSpeed * jumpFactor);
 			canJump = false;
+			ableToChangeLane = false;
 			Transform skin = this.gameObject.transform.Find("Skin");
 			skin.GetComponent<Animation>().Play("Win");
 		}
@@ -95,6 +98,7 @@ public class PlayerMotor : MonoBehaviour {
 
 		if(hit.gameObject.tag.Contains("Tile")){
 			canJump = true;
+			ableToChangeLane = true;
 			if (!isDead) {
 				Transform skin = this.gameObject.transform.Find("Skin");
 				skin.GetComponent<Animation>().Play("Run");
