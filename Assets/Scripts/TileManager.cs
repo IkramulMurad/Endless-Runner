@@ -28,6 +28,8 @@ public class TileManager : MonoBehaviour {
 		playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
 
 		for(int i = 0; i < tileOnScreen; ++i){
+			spawn_tree();
+
 			if(i < 3){
 				spawn_tile(0);
 			}
