@@ -4,9 +4,16 @@ using UnityEngine;
 
 public class DestroyIsland : MonoBehaviour {
 
-	// Use this for initialization
+	private Transform camera;
+
 	void Start () {
-		Destroy(this.gameObject, 15.0f);
+		camera = GameObject.Find("Main Camera").transform;
+	}
+
+	void Update() {
+		if ( transform.position.z < camera.position.z ) {
+			Destroy(this.gameObject, 1.5f);
+		}
 	}
 
 }

@@ -9,6 +9,9 @@ public class RandomPositionAndRotation : MonoBehaviour {
 	private int lastPosIndex = -1;
 	private int lastRotIndex = -1;
 
+	public bool changePosition = true;
+	public bool changeRotation = true;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -16,10 +19,10 @@ public class RandomPositionAndRotation : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(!positionChanged){
+		if(!positionChanged && changePosition){
 			change_position();
 		}
-		if(!rotationChanged){
+		if(!rotationChanged && changeRotation){
 			change_rotation();
 		}
 	}
@@ -27,12 +30,9 @@ public class RandomPositionAndRotation : MonoBehaviour {
 	private void change_rotation(){
 		float[] yRot = {0f, 26f, 56f, 87f, 130f, 155f, 220f, 293f, 350f};
 		int randomNumber = random_index(0, yRot.Length, lastRotIndex);
+		Vector3 originalAngles = transform.rotation.eulerAngles;
 
-		//dynamic
-		// Vector3 originalAngles = transform.rotation.eulerAngles;
-		// transform.rotation = Quaternion.Euler(originalAngles.x, yRot[randomNumber], originalAngles.z);
-
-		transform.rotation = Quaternion.Euler(0f, yRot[randomNumber], 0f);
+		transform.rotation = Quaternion.Euler(originalAngles.x, yRot[randomNumber], originalAngles.z);
 		rotationChanged = true;
 
 		// Debug.Log("index: " + randomNumber + "\n" + "val: " + yRot[randomNumber]);
